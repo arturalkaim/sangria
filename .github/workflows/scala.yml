@@ -7,17 +7,13 @@ on:
     branches: [ "master" ]
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'
-        required: true
-        default: 'warning' 
-        type: choice
-        options:
-        - info
-        - warning
-        - debug 
       runTests:
         description: 'Run tests'
+        required: true
+        default: true 
+        type: boolean
+      sendSlackNotification:
+        description: 'Send Slack Notification'
         required: true
         default: true 
         type: boolean
