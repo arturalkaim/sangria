@@ -7,11 +7,15 @@ on:
     branches: [ "master" ]
   workflow_dispatch:
     inputs:
+      tag:
+        description: 'Build Tag'
+        required: true
+        type: string
       runTests:
         description: 'Run tests'
         required: true
         default: true 
-        type: boolean
+        type: boolean        
       sendSlackNotification:
         description: 'Send Slack Notification'
         required: true
